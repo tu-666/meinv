@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4K超清美女壁纸资源共享中心 - 高清全屏锁屏壁纸合集</title>
+    <meta name="keywords" content="美女壁纸, 4K壁纸, 高清壁纸, 夸克网盘, 屏保壁纸, 手机壁纸, 全面屏壁纸, 纯欲风, 氛围感">
+    <meta name="description" content="精选上百套4K、8K超清美女壁纸资源，涵盖氛围感、纯欲系、高级感等多种风格，提供夸克网盘高清无水印原图下载。">
+    <style>
+        :root {
+            /* 浅色主题变量 */
+            --bg-color: #f3f6f9;
+            --header-bg: rgba(255, 255, 255, 0.85);
+            --card-bg: #ffffff;
+            --text-main: #1a1a24;
+            --text-sub: #5c6370;
+            --accent-color: #ff6b81;
+            --accent-hover: #ff4764;
+            --border-color: #e2e8f0;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --link-color: #4a90e2;
+        }
+
+        [data-theme="dark"] {
+            /* 深色主题变量 - 严格强化文字清晰度和对比度 */
+            --bg-color: #0d1117;
+            --header-bg: rgba(22, 27, 34, 0.85);
+            --card-bg: #161b22;
+            --text-main: #ffffff;
+            --text-sub: #c9d1d9;
+            --accent-color: #ff8da1;
+            --accent-hover: #ffb3c1;
+            --border-color: #30363d;
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --link-color: #58a6ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* 顶部导航与搜索 */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--header-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            box-shadow: 0 4px 20px var(--shadow-color);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-top {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--accent-color), #a88bec);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        .theme-toggle:hover {
+            border-color: var(--accent-color);
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 2px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(255, 107, 129, 0.2);
+        }
+
+        /* 统计数据 */
+        .stats {
+            text-align: center;
+            margin: 30px 0 10px;
+            font-size: 1rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        /* 瀑布流/网格容器 */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* 卡片设计 */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--shadow-color);
+            border-color: var(--accent-color);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main); /* 强制使用主题文字变量，防深色模式看不清 */
+            margin-bottom: 10px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-btn {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            background: var(--accent-color);
+            color: #ffffff !important; /* 按钮文字固定为白色以保持对比 */
+            padding: 10px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+
+        .card-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        /* 暂无数据提示 */
+        .no-result {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px;
+            color: var(--text-sub);
+            font-size: 1.2rem;
+            display: none;
+        }
+
+        /* 底部与友链 */
+        footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .friend-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .friend-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .friend-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-text {
+            color: var(--text-sub);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <h1>✨ 极品美女壁纸资源库</h1>
+                <button class="theme-toggle" id="themeBtn">切换深色模式 🌙</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索资源关键词 (例如: 4K, 白鹿, 氛围感, 黑丝)...">
+            </div>
+        </div>
+    </header>
+
+    <div class="stats">
+        共收录 <span id="count" style="color: var(--accent-color); font-weight: bold;">0</span> 套精选壁纸合集
+    </div>
+
+    <div class="container" id="resourceContainer">
+        <div class="no-result" id="noResult">没有找到相关的壁纸资源哦，换个关键词试试吧~</div>
+        <!-- 卡片动态生成 -->
+    </div>
+
+    <footer>
+        <div class="friend-links">
+            <a href="https://www.souyuanzhan.com/" target="_blank">搜源站</a>
+            <a href="https://youyuanvip.com/" target="_blank">优源网</a>
+            <a href="https://viptu.cn/" target="_blank">资源汇</a>
+            <a href="https://tujifang.com/" target="_blank">图集坊</a>
+            <a href="https://dh.fuliwu.vip/" target="_blank">优选导航</a>
+        </div>
+        <div class="footer-text">
+            &copy; 2026 资源分享库. All Rights Reserved. 仅供个人交流学习使用。
+        </div>
+    </footer>
+
+    <script>
+        // 资源数据列表
+        const resources = [
+            {"title": "美女壁纸丨4K高清美女屏保壁纸48张", "url": "https://pan.quark.cn/s/c3b6f80bc058"},
+            {"title": "美女壁纸丨4K腿美女原图壁纸135张", "url": "https://pan.quark.cn/s/acd6eebac075"},
+            {"title": "美女壁纸丨8K全面屏美女超清壁纸49张", "url": "https://pan.quark.cn/s/c0559a5ec7f6"},
+            {"title": "美女壁纸丨暗黑系美女4K高清壁纸53张", "url": "https://pan.quark.cn/s/28004ae6378b"},
+            {"title": "美女壁纸丨背带裤美女高清图片83张", "url": "https://pan.quark.cn/s/0213e91ec3b3"},
+            {"title": "美女壁纸丨白鹿高清图62张", "url": "https://pan.quark.cn/s/adc95728f641"},
+            {"title": "美女壁纸丨白鹿高清写真合集144张", "url": "https://pan.quark.cn/s/e5244fd38134"},
+            {"title": "美女壁纸丨白鹿明星氛围感壁纸71张", "url": "https://pan.quark.cn/s/4aec150dd0b7"},
+            {"title": "美女壁纸丨白鹿微笑写真合集68张", "url": "https://pan.quark.cn/s/a6256dcefc33"},
+            {"title": "美女壁纸丨白丝禁欲系美女超清壁纸76张", "url": "https://pan.quark.cn/s/371919929a24"},
+            {"title": "美女壁纸丨背影美女高清壁纸87张", "url": "https://pan.quark.cn/s/f2e8a498a0ad"},
+            {"title": "美女壁纸丨穿搭博主美女高清图50张", "url": "https://pan.quark.cn/s/1647535b2c57"},
+            {"title": "美女壁纸丨纯欲系美女高清壁纸52张", "url": "https://pan.quark.cn/s/2fdfe6fac89c"},
+            {"title": "美女壁纸丨吊带丝袜美女高清壁纸45张", "url": "https://pan.quark.cn/s/c81984f0e4c2"},
+            {"title": "美女壁纸丨顶级美女高清壁纸106张", "url": "https://pan.quark.cn/s/0b380d6ec9af"},
+            {"title": "美女壁纸丨顶级身材美女壁纸集53张", "url": "https://pan.quark.cn/s/d37c0f8d469f"},
+            {"title": "美女壁纸丨顶级御姐美女高清图37张", "url": "https://pan.quark.cn/s/06a2eb32be92"},
+            {"title": "美女壁纸丨大师级自然风景壁纸70张", "url": "https://pan.quark.cn/s/fc172fbd79ab"},
+            {"title": "美女壁纸丨风情万种姐姐高清壁纸36张", "url": "https://pan.quark.cn/s/54679a2a4464"},
+            {"title": "美女壁纸丨氛围感4K美女高清壁纸55张", "url": "https://pan.quark.cn/s/8627b33928b8"},
+            {"title": "美女壁纸丨氛围感美女超清锁屏壁纸69张", "url": "https://pan.quark.cn/s/71a9a16a0f1d"},
+            {"title": "美女壁纸丨氛围感美女高清锁屏壁纸49张", "url": "https://pan.quark.cn/s/fa994c662b7b"},
+            {"title": "美女壁纸丨氛围感美女沦陷壁纸72张", "url": "https://pan.quark.cn/s/eb5e174edd99"},
+            {"title": "美女壁纸丨氛围感全屏高清壁纸41张", "url": "https://pan.quark.cn/s/780a15b4d7d5"},
+            {"title": "美女壁纸丨高傲女神美女高清图片54张", "url": "https://pan.quark.cn/s/2639e485d666"},
+            {"title": "美女壁纸丨高清壁纸大全集83张", "url": "https://pan.quark.cn/s/02738960f757"},
+            {"title": "美女壁纸丨高清美女壁纸精选合集53张", "url": "https://pan.quark.cn/s/6ffcd208ac81"},
+            {"title": "美女壁纸丨瑜伽裤美女无水印壁纸145张", "url": "https://pan.quark.cn/s/a6de7b08e035"},
+            {"title": "美女壁纸丨眼镜妹美女高清壁纸178张", "url": "https://pan.quark.cn/s/200af4f6573d"},
+            {"title": "美女壁纸丨氧气少女写真高清原图149张", "url": "https://pan.quark.cn/s/ece498106143"},
+            {"title": "美女壁纸丨油丝美女高清壁纸集57张", "url": "https://pan.quark.cn/s/e8f05e3bed69"},
+            {"title": "美女壁纸丨严选高清美女壁纸集61张", "url": "https://pan.quark.cn/s/e51f1420b4ff"},
+            {"title": "美女壁纸丨优选美女壁纸精选二40张", "url": "https://pan.quark.cn/s/cd8164ea34c8"},
+            {"title": "美女壁纸丨优选美女壁纸精选集42张", "url": "https://pan.quark.cn/s/38ad15f26105"},
+            {"title": "美女壁纸丨优选美女高清壁纸合集70张", "url": "https://pan.quark.cn/s/6d9db642b271"},
+            {"title": "美女壁纸丨养眼美女无水印壁纸60张", "url": "https://pan.quark.cn/s/280017e42505"},
+            {"title": "美女壁纸丨颜值炸裂美女全屏壁纸68张", "url": "https://pan.quark.cn/s/5abfde2a6625"},
+            {"title": "A⼁暗黑系美女壁纸背景图【52张合集】", "url": "https://pan.quark.cn/s/faf05806f0ab"},
+            {"title": "B⼁背带裤美女图片合集 ① 持续更新中", "url": "https://pan.quark.cn/s/e3a8228d580a"},
+            {"title": "B⼁白鹿高清写真合集｜144张可爱微笑女神", "url": "https://pan.quark.cn/s/e995c1221476"},
+            {"title": "B⼁白鹿高清写真美女图片60张合集【自拍简直太美了】", "url": "https://pan.quark.cn/s/34672d4b4839"},
+            {"title": "B⼁白鹿自由氛围感高清壁纸70张", "url": "https://pan.quark.cn/s/958132bbbcec"},
+            {"title": "B⼁白丝控狂喜！73张禁欲氛围感纯白丝美女超清壁纸", "url": "https://pan.quark.cn/s/716b1887e173"},
+            {"title": "B⼁背影杀美女图片合集 ① 持续更新中", "url": "https://pan.quark.cn/s/d7c9eedd2b3a"},
+            {"title": "B⼁壁纸分享⼁58张全面屏高清美女壁纸合集，无水印自取", "url": "https://pan.quark.cn/s/3018a435e4ff"},
+            {"title": "B⼁壁纸合集⼁52张精挑细选美女壁纸分享", "url": "https://pan.quark.cn/s/1f9df45234f1"},
+            {"title": "B⼁壁纸资源分享⼁48张氛围感美女高清锁屏，自取无压缩", "url": "https://pan.quark.cn/s/da13f1ccb4d4"},
+            {"title": "C⼁超高清美女壁纸68张合集大全【F】", "url": "https://pan.quark.cn/s/8eccc4672a4c"},
+            {"title": "C⼁超清4K大长腿美女壁纸⼁113张原图合集免费取", "url": "https://pan.quark.cn/s/7215a0a55b2c"},
+            {"title": "C⼁超清美女图片壁纸（神仙颜值女神）", "url": "https://pan.quark.cn/s/095ebf8cbebb"},
+            {"title": "D⼁D杯大Nai美女图片合集 ① 持续更新中", "url": "https://pan.quark.cn/s/d87249d7d2cc"},
+            {"title": "D⼁吊带丝袜性感美女图片合集① 持续更新中", "url": "https://pan.quark.cn/s/51e6111bc8e2"},
+            {"title": "D⼁顶级美女美腿100+合集【男人福音】持续更新中", "url": "https://pan.quark.cn/s/2cbf737b6da2"},
+            {"title": "D⼁顶级美胸美女图片合集 ① 持续更新中", "url": "https://pan.quark.cn/s/698752e5efb3"},
+            {"title": "D⼁顶级御姐美女图片合集（36张）", "url": "https://pan.quark.cn/s/17ad6a9aaec4"},
+            {"title": "F⼁氛围感拉满⼁55张4K高清美女壁纸分享", "url": "https://pan.quark.cn/s/4254f7cdedac"},
+            {"title": "F⼁氛围感美女锁屏壁纸⼁56张超清无水印原图", "url": "https://pan.quark.cn/s/7d0022dca5cb"},
+            {"title": "G⼁高傲女神美女图片合集①持续更新中", "url": "https://pan.quark.cn/s/43754b1d510c"},
+            {"title": "G⼁高级感拉满！52张清冷⼁纯欲系极品美女高清壁纸合集", "url": "https://pan.quark.cn/s/0b5404c63e15"},
+            {"title": "G⼁高清壁纸甜美可人符合你心中偏爱【36张】", "url": "https://pan.quark.cn/s/fbd8cacf73dc"},
+            {"title": "G⼁高清紧身瑜伽裤美女壁纸 全套无水印合集【143张】", "url": "https://pan.quark.cn/s/337c10a60ad3"},
+            {"title": "G⼁高清美女52张合集【男士深夜福利壁纸】", "url": "https://pan.quark.cn/s/39a73b72f4e8"},
+            {"title": "G⼁高颜值4K美女壁纸资源，66张原图打造精致手机锁屏桌面", "url": "https://pan.quark.cn/s/76462d5b2b81"},
+            {"title": "H⼁黑丝壁纸合集【黑丝美女壁纸】② 持续更新中", "url": "https://pan.quark.cn/s/d1df0ea14d89"},
+            {"title": "H⼁黑丝美女图片合集54张【黑色丝袜永远的神】", "url": "https://pan.quark.cn/s/f6260acfa74a"},
+            {"title": "J⼁渐变丝袜美女图片47+合集 持续更新中", "url": "https://pan.quark.cn/s/691101d631ac"},
+            {"title": "J⼁绝版珍藏！68P氧气少女感写真全套原图合集", "url": "https://pan.quark.cn/s/72feac8b21b0"},
+            {"title": "J⼁JK美女自拍图片56张合集【2025年9月19日】", "url": "https://pan.quark.cn/s/4b01087cd6e2"},
+            {"title": "J⼁绝美美女图片72合集【高清壁纸】", "url": "https://pan.quark.cn/s/abb2b58f3ee7"},
+            {"title": "J⼁绝美写真美女图片合集【极品好身材60张高清壁纸】", "url": "https://pan.quark.cn/s/25aa1dabe12f"},
+            {"title": "J⼁极品身材爱穿搭【今日穿搭博主】", "url": "https://pan.quark.cn/s/e2a661f879dd"},
+            {"title": "J⼁精挑细选美女图片合集56张（美女壁纸）", "url": "https://pan.quark.cn/s/7d365da54b85"},
+            {"title": "J⼁精挑细选美女图片合集66张【2025年9月19日】", "url": "https://pan.quark.cn/s/9036398436ad"},
+            {"title": "J⼁精选美女图片68张合集【绝美少女】", "url": "https://pan.quark.cn/s/d7bb44cdf2e5"},
+            {"title": "J⼁精选美女图片合集⼁持续更新中", "url": "https://pan.quark.cn/s/2a77e69f081d"},
+            {"title": "J⼁精选美女图片合集【153张】", "url": "https://pan.quark.cn/s/6828d6fd4ba4"},
+            {"title": "J⼁精选性感美女图片合集（持续更新中）", "url": "https://pan.quark.cn/s/b05f367a04ce"},
+            {"title": "K⼁可爱美女小姐姐44张合集（精选美图）", "url": "https://pan.quark.cn/s/7c8c259638b3"},
+            {"title": "L⼁66张高清美女写真合集，张张超清，视觉盛宴直接拉满【F】", "url": "https://pan.quark.cn/s/3a9ba557ef49"},
+            {"title": "L⼁萝莉美女图鉴62张高清壁纸【渣男必备】", "url": "https://pan.quark.cn/s/f200cdf5c70f"},
+            {"title": "L⼁蕾丝丝袜美女图片合集【蕾丝控福音】持续更新中", "url": "https://pan.quark.cn/s/74127ff3ea9b"},
+            {"title": "M⼁美背壁纸合集（美女美背壁纸）①", "url": "https://pan.quark.cn/s/8d24b628230c"},
+            {"title": "M⼁美女壁纸⼁48张高清清纯可爱美少女壁纸合集，小众无水印原图全放送", "url": "https://pan.quark.cn/s/858a5ae1672a"},
+            {"title": "M⼁美女美背图片合集【顶级美背壁纸】持续更新中", "url": "https://pan.quark.cn/s/c30af929fb56"},
+            {"title": "M⼁美女图片合集75张【高清美女壁纸合集】", "url": "https://pan.quark.cn/s/b701026c0415"},
+            {"title": "M⼁美女图片合集100+（持续更新中）", "url": "https://pan.quark.cn/s/394ef33b92d8"},
+            {"title": "M⼁美女图片精选图集60张", "url": "https://pan.quark.cn/s/10ef6b2ce03c"},
+            {"title": "M⼁美女图片精选【53P+合集】①持续更新中", "url": "https://pan.quark.cn/s/c1808276ca0d"},
+            {"title": "M⼁美女纸合集⼁46张全面屏性感女神壁纸，高清无水印自取", "url": "https://pan.quark.cn/s/72e3e79c7b42"},
+            {"title": "M⼁美人图鉴丨风情万种的姐姐36张合集", "url": "https://pan.quark.cn/s/2a1a4bf64dd2"},
+            {"title": "M⼁蜜桃臀美女图集大全【持续更新中】", "url": "https://pan.quark.cn/s/cfb66f83e74a"},
+            {"title": "M⼁全面屏美女壁纸合集26张【每一张都很美】", "url": "https://pan.quark.cn/s/7b04c5de3cf1"},
+            {"title": "M｜美女壁纸8k全面屏超高清48张", "url": "https://pan.quark.cn/s/18e38dfa57bf"},
+            {"title": "N⼁男人最爱大胸妹合集（持续更新中）", "url": "https://pan.quark.cn/s/bcace833577a"},
+            {"title": "N⼁男人最爱美女图片48张合集【高清美女壁纸】", "url": "https://pan.quark.cn/s/c88076cf7a12"},
+            {"title": "Q⼁旗袍东方美女图片合集【持续更新中】", "url": "https://pan.quark.cn/s/bc810ade42ca"},
+            {"title": "Q⼁全屏美女壁纸高清合集1（66张男人福利）", "url": "https://pan.quark.cn/s/6d379feba95d"},
+            {"title": "Q⼁千挑万选绝美美女合集", "url": "https://pan.quark.cn/s/b1fc6ba1bea6"},
+            {"title": "Q⼁全网精选超清黑丝女神锁屏壁纸原图素材【116张】", "url": "https://pan.quark.cn/s/3f1277c36378"},
+            {"title": "R⼁人间极品精选美女图片68张合集【高清美女壁纸】", "url": "https://pan.quark.cn/s/2e151aaaaff8"},
+            {"title": "S丨精选手机壁纸大合集 4.76 GB", "url": "https://pan.quark.cn/s/34bc32a59f24"},
+            {"title": "S⼁4K高清美女壁纸｜55张青春阳光少女无水印锁屏图片合集", "url": "https://pan.quark.cn/s/896ea1d9c799"},
+            {"title": "S⼁身材简直无敌了【高清美女图片52张合集】", "url": "https://pan.quark.cn/s/e8a29f458a72"},
+            {"title": "S⼁手机壁纸⼁66张超清美女壁纸原图，无水印存手机直接用", "url": "https://pan.quark.cn/s/81e7e3c947d1"},
+            {"title": "S⼁审美在线｜44张4K高清美女壁纸，每一张都适合当屏保", "url": "https://pan.quark.cn/s/c333f7358a38"},
+            {"title": "S⼁绅士严选美女图片56张合集【顶级美女图片】", "url": "https://pan.quark.cn/s/c760f21b2f24"},
+            {"title": "W⼁56张精选辣妹性感壁纸，高清原图无水印速取", "url": "https://pan.quark.cn/s/f78b362fa0f4"},
+            {"title": "W⼁微笑天使白鹿自拍写真专辑67张高清合集【简直太可爱了】", "url": "https://pan.quark.cn/s/0abd2fc73e9f"},
+            {"title": "X⼁性感美女图片60张合集【高清壁纸】", "url": "https://pan.quark.cn/s/9606a9d8331b"},
+            {"title": "X⼁性感美女图片80P合集（持续更新中）", "url": "https://pan.quark.cn/s/dba06c26565f"},
+            {"title": "X⼁性感美女图片合集70+（持续更新中）", "url": "https://pan.quark.cn/s/4048d78f2397"},
+            {"title": "X⼁性感女神图片42张合集【高清全面屏壁纸】", "url": "https://pan.quark.cn/s/0ca55add7e6e"},
+            {"title": "X⼁性感女神图片合集62张（持续更新中）", "url": "https://pan.quark.cn/s/be28256d1106"},
+            {"title": "X⼁性感女神图片合集80张（美女全屏壁纸）", "url": "https://pan.quark.cn/s/3c7ae4a3f1d0"},
+            {"title": "X⼁小红书美女图片52张合集【精选美女壁纸】", "url": "https://pan.quark.cn/s/51e127eb4bf7"},
+            {"title": "X⼁小众高级感美女手机壁纸｜精修甄选77张可直接保存", "url": "https://pan.quark.cn/s/d5185fb74513"},
+            {"title": "Y⼁眼镜妹美女图片【男的的最爱】持续更新中", "url": "https://pan.quark.cn/s/e1bca55b214c"},
+            {"title": "Y⼁油丝美女图片合集 ① 持续更新中", "url": "https://pan.quark.cn/s/8993dce6392d"},
+            {"title": "Y⼁严选60张高清美女图片壁纸【福利美女照片】", "url": "https://pan.quark.cn/s/8c6a118d94e5"},
+            {"title": "Y⼁优选顶级身材美女图片52张合集", "url": "https://pan.quark.cn/s/4caacba436ca"},
+            {"title": "Y⼁优选美女图片壁纸合集 ①", "url": "https://pan.quark.cn/s/0e2e1830bb6c"},
+            {"title": "Y⼁优选美女图片壁纸合集 ②", "url": "https://pan.quark.cn/s/1a6656a35919"},
+            {"title": "Y⼁优选美女图片合集 69张（持续更新中）", "url": "https://pan.quark.cn/s/dad752ca70d4"},
+            {"title": "Y⼁养眼美女高清壁纸合集｜60张精选无水印锁屏素材", "url": "https://pan.quark.cn/s/0860a49337c6"},
+            {"title": "Y⼁颜值直接封神！52张高清美女壁纸合集【可下载】", "url": "https://pan.quark.cn/s/77bc96d5405e"},
+            {"title": "Z⼁珍藏多年神仙颜值小姐姐壁纸（高清43张合集）", "url": "https://pan.quark.cn/s/8a6dd9271563"},
+            {"title": "美女壁纸丨高清美女写真超清合集66张", "url": "https://pan.quark.cn/s/89283a44a6e1"},
+            {"title": "美女壁纸丨高颜值4K美女锁屏壁纸66张", "url": "https://pan.quark.cn/s/e93ca6018bee"},
+            {"title": "美女壁纸丨高颜值美女高清壁纸56张", "url": "https://pan.quark.cn/s/207655bf192d"},
+            {"title": "美女壁纸丨黑丝美女高清壁纸合集61张", "url": "https://pan.quark.cn/s/0af39aac2f60"},
+            {"title": "美女壁纸丨黑丝美女高清写真集54张", "url": "https://pan.quark.cn/s/7e91332df889"},
+            {"title": "美女壁纸丨黑丝女神超清锁屏壁纸118张", "url": "https://pan.quark.cn/s/7b1ce6d203ba"},
+            {"title": "美女壁纸丨渐变丝袜美女高清壁纸47张", "url": "https://pan.quark.cn/s/346846e13c7c"},
+            {"title": "美女壁纸丨JK制服美女自拍高清66张", "url": "https://pan.quark.cn/s/0e4e3470c401"},
+            {"title": "美女壁纸丨绝美美女高清壁纸集72张", "url": "https://pan.quark.cn/s/33c8ef7dea91"},
+            {"title": "美女壁纸丨绝美少女高清图片集68张", "url": "https://pan.quark.cn/s/cb6993099cac"},
+            {"title": "美女壁纸丨极品好身材美女写真58张", "url": "https://pan.quark.cn/s/3467e8d954cc"},
+            {"title": "美女壁纸丨极品身材美女高清壁纸67张", "url": "https://pan.quark.cn/s/8ac46e8b2c0e"},
+            {"title": "美女壁纸丨精挑细选美女高清壁纸52张", "url": "https://pan.quark.cn/s/667a67201029"},
+            {"title": "美女壁纸丨精挑细选美女高清图112张", "url": "https://pan.quark.cn/s/2b2ba0c2c460"},
+            {"title": "美女壁纸丨精挑细选美女写真集68张", "url": "https://pan.quark.cn/s/5716767d017c"},
+            {"title": "美女壁纸丨精修高颜值美女壁纸58张", "url": "https://pan.quark.cn/s/60a16c7ee36f"},
+            {"title": "美女壁纸丨精选美女壁纸大全集49张", "url": "https://pan.quark.cn/s/58cbc97bebfd"},
+            {"title": "美女壁纸丨精选美女高清壁纸大全154张", "url": "https://pan.quark.cn/s/ddb6b0024191"},
+            {"title": "美女壁纸丨精选美女高清图片集103张", "url": "https://pan.quark.cn/s/c6d2579f326f"},
+            {"title": "美女壁纸丨精选性感美女高清壁纸43张", "url": "https://pan.quark.cn/s/cf29c77743d8"},
+            {"title": "美女壁纸丨可爱美女小姐姐壁纸88张", "url": "https://pan.quark.cn/s/03838877cc77"},
+            {"title": "美女壁纸丨萝莉美女高清壁纸图鉴62张", "url": "https://pan.quark.cn/s/a2e6a5d42d18"},
+            {"title": "美女壁纸丨辣妹性感壁纸高清原图56张", "url": "https://pan.quark.cn/s/de42a6d8363a"},
+            {"title": "美女壁纸丨蕾丝丝袜美女高清壁纸41张", "url": "https://pan.quark.cn/s/fce86ff9eb73"},
+            {"title": "美女壁纸丨美女壁纸合集68张", "url": "https://pan.quark.cn/s/fd432a1253a3"},
+            {"title": "美女壁纸丨美女高清图片大全集129张", "url": "https://pan.quark.cn/s/830a5e450e6d"},
+            {"title": "美女壁纸丨美女精选高清图集60张", "url": "https://pan.quark.cn/s/5b01001be6a9"},
+            {"title": "美女壁纸丨美女美背壁纸大全集135张", "url": "https://pan.quark.cn/s/956735e84fd9"},
+            {"title": "美女壁纸丨美女美背壁纸精选集36张", "url": "https://pan.quark.cn/s/34c18544573f"},
+            {"title": "美女壁纸丨美女图片精选壁纸集53张", "url": "https://pan.quark.cn/s/ae2e69a3b4f1"},
+            {"title": "美女壁纸丨蜜桃臀美女高清壁纸48张", "url": "https://pan.quark.cn/s/237d633aff00"},
+            {"title": "美女壁纸丨清纯美少女无水印壁纸48张", "url": "https://pan.quark.cn/s/555c60dc1192"},
+            {"title": "美女壁纸丨青春少女4K无水印壁纸55张", "url": "https://pan.quark.cn/s/7444ecff9418"},
+            {"title": "美女壁纸丨全面屏高清美女无水印壁纸58张", "url": "https://pan.quark.cn/s/fb97af5d7264"},
+            {"title": "美女壁纸丨全面屏美女壁纸精选26张", "url": "https://pan.quark.cn/s/439c0f51cdac"},
+            {"title": "美女壁纸丨全面屏性感女神壁纸46张", "url": "https://pan.quark.cn/s/465d1842c326"},
+            {"title": "美女壁纸丨旗袍东方美女高清壁纸131张", "url": "https://pan.quark.cn/s/02e15828c413"},
+            {"title": "美女壁纸丨全屏美女壁纸精选集66张", "url": "https://pan.quark.cn/s/18e80c92dbc1"},
+            {"title": "美女壁纸丨千挑万选绝美美女壁纸85张", "url": "https://pan.quark.cn/s/530d2c336808"},
+            {"title": "美女壁纸丨人间极品美女高清壁纸67张", "url": "https://pan.quark.cn/s/7a9e04a10268"},
+            {"title": "美女壁纸丨手机超清美女无水印壁纸67张", "url": "https://pan.quark.cn/s/388eb6e804d4"},
+            {"title": "美女壁纸丨绅士严选美女高清壁纸57张", "url": "https://pan.quark.cn/s/85b6be4b2845"},
+            {"title": "美女壁纸丨神仙颜值女神高清壁纸48张", "url": "https://pan.quark.cn/s/0cc51c918cf8"},
+            {"title": "美女壁纸丨神仙颜值小姐姐壁纸45张", "url": "https://pan.quark.cn/s/854b2a0d14bf"},
+            {"title": "美女壁纸丨甜美可人美女高清壁纸37张", "url": "https://pan.quark.cn/s/8fcfe44f7e88"},
+            {"title": "美女壁纸丨无敌好身材美女壁纸53张", "url": "https://pan.quark.cn/s/ad778112192d"},
+            {"title": "美女壁纸丨网盘转存免费1T空间指南48张", "url": "https://pan.quark.cn/s/7ca081717ec3"},
+            {"title": "美女壁纸丨性感美女壁纸合集71张", "url": "https://pan.quark.cn/s/2e1e1c7ea46b"},
+            {"title": "美女壁纸丨性感美女壁纸精选集81张", "url": "https://pan.quark.cn/s/4c46cef2eca9"},
+            {"title": "美女壁纸丨性感美女高清壁纸集120张", "url": "https://pan.quark.cn/s/a02b6162e85e"},
+            {"title": "美女壁纸丨性感美女精选壁纸集41张", "url": "https://pan.quark.cn/s/a60b0ae4648d"},
+            {"title": "美女壁纸丨性感女神高清壁纸合集62张", "url": "https://pan.quark.cn/s/3f8362bf25c5"},
+            {"title": "美女壁纸丨性感女神全面屏壁纸45张", "url": "https://pan.quark.cn/s/569658384cec"},
+            {"title": "美女壁纸丨性感女神全屏壁纸160张", "url": "https://pan.quark.cn/s/7fabb9af55e4"},
+            {"title": "美女壁纸丨性感身材美女高清图112张", "url": "https://pan.quark.cn/s/b11d165142ec"},
+            {"title": "美女壁纸丨小红书美女高清壁纸51张", "url": "https://pan.quark.cn/s/49dbc01459be"},
+            {"title": "美女壁纸丨小众高级感美女壁纸72张", "url": "https://pan.quark.cn/s/760d0af70f2a"},
+            {"title": "美女壁纸丨小众高级真人美女壁纸44张", "url": "https://pan.quark.cn/s/21b493ea0383"}
+        ];
+
+        const container = document.getElementById('resourceContainer');
+        const countSpan = document.getElementById('count');
+        const searchInput = document.getElementById('searchInput');
+        const noResult = document.getElementById('noResult');
+        const themeBtn = document.getElementById('themeBtn');
+
+        // 初始化深色模式（读取本地存储或系统偏好）
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeBtn.innerText = '切换浅色模式 ☀️';
+        }
+
+        // 深浅模式切换逻辑
+        themeBtn.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeBtn.innerText = '切换深色模式 🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeBtn.innerText = '切换浅色模式 ☀️';
+            }
+        });
+
+        // 渲染卡片函数
+        function renderCards(data) {
+            // 清除旧卡片（保留无结果提示元素）
+            const cards = container.querySelectorAll('.card');
+            cards.forEach(card => card.remove());
+
+            countSpan.innerText = data.length;
+
+            if (data.length === 0) {
+                noResult.style.display = 'block';
+                return;
+            } else {
+                noResult.style.display = 'none';
+            }
+
+            data.forEach(item => {
+                // 提取图片张数作为展示元信息，如果没有写张数则默认显示“高清合集”
+                let match = item.title.match(/(\d+)张/);
+                let tag = match ? `✨ 包含 ${match[1]} 张图片` : '✨ 精选高清合集';
+
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-icon">🖼️</div>
+                    <div class="card-title">${item.title}</div>
+                    <div class="card-meta">${tag}</div>
+                    <a href="${item.url}" target="_blank" class="card-btn">保存至夸克网盘</a>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // 初始渲染全部资源
+        renderCards(resources);
+
+        // 搜索过滤逻辑
+        searchInput.addEventListener('input', (e) => {
+            const keyword = e.target.value.toLowerCase().trim();
+            if (!keyword) {
+                renderCards(resources);
+                return;
+            }
+            
+            const filteredData = resources.filter(item => 
+                item.title.toLowerCase().includes(keyword)
+            );
+            
+            renderCards(filteredData);
+        });
+    </script>
+</body>
+</html>
